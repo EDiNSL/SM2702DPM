@@ -1,3 +1,19 @@
+The Website
+0) The website, while still in testing, is avaliable at https://edinsl.github.io/SM2702DPM/
+
+0) It is recommended to use Firefox or Chrome to visit the website.
+
+1) After landing to the page, open the console by right-click on the page, select Inspect Element, then go to the console tab.
+
+2) Select an image by clicking on the 'Choose File' button on the page. 
+
+3) Once it finish loading the image, click on the 'Button' to start the prediction
+
+4) In the console, it will output an array of three integers, each represents the probability of 'Big', 'Average', and 'Small' in order once it finishes the prediction.
+
+
+Running the Machine in Python
+
 0) The following instruction is tested and based on Windows OS, but basic procedure should apply to all.
 
 1) Download and install Miniconda 64bit.
