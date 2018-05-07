@@ -7,13 +7,22 @@
     <meta http-equiv="Expires" content="0" />
     <title>Machine</title>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.9.0"> </script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
   </head>
   <body>
     <body>
-      <canvas id="imageCanvas" width="224" height="224"></canvas>
-      <input type="file" id="loader" name="imageLoader"/>
-      <button type="button" name="button" onclick="load_data()">button</button>
-      <script src="script/tfmodel.js"></script>
+      <div id="content">
+        <h1>SIZES OF THE INTERNET</h1>
+        <div id="canvas">
+          <canvas id="imageCanvas" width="224" height="224"></canvas>
+          <div id="loadcontainer">
+            <input type="file" id="loader" name="imageLoader"/>
+            <p id="select">Select</p>
+          </div>
+          <button type="button" id="button" name="button" onclick="load_data()">Submit</button>
+        </div>
+        <script src="script/tfmodel.js"></script>
+      </div>
     </body>
   </body>
 </html>
