@@ -5,9 +5,9 @@ The Website
 
 1) After landing to the page, open the console by right-click on the page, select Inspect Element, then go to the console tab.
 
-2) Select an image by clicking on the 'Choose File' button on the page. 
+2) Select an image by clicking on the 'Select' button on the page. 
 
-3) Once it finish loading the image, click on the 'Button' to start the prediction
+3) Once it finish loading the image, click on the 'Submit' to start the prediction
 
 4) In the console, it will output an array of three integers, each represents the probability of 'Big', 'Average', and 'Small' in order once it finishes the prediction.
 
