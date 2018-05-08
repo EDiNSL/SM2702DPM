@@ -1,5 +1,5 @@
 The Website
-0) The website, while still in testing, is avaliable at https://edinsl.github.io/SM2702DPM/
+0) The website, while still in testing and development, is avaliable at https://edinsl.github.io/SM2702DPM/
 
 0) It is recommended to use Firefox or Chrome to visit the website.
 
