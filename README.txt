@@ -11,6 +11,8 @@ The Website
 
 4) In the console, it will output an array of three integers, each represents the probability of 'Big', 'Average', and 'Small' in order once it finishes the prediction.
 
+Known Bugs
+- Due to WebGL error, selecting another image to make another prediction may return an array of zeros. Please reload the page before making any predictions.
 
 Running the Machine in Python
 
