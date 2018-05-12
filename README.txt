@@ -15,6 +15,7 @@ Known Bugs
 - Due to WebGL error, selecting another image to make another prediction may return an array of zeros. Please reload the page before making any predictions.
 
 Running the Machine in Python
+0) The Pyhton version uses a differntly trained network. Results may be different from the one in the paper.
 
 0) The following instruction is tested and based on Windows OS, but basic procedure should apply to all.
 
