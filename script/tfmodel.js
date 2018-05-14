@@ -5,6 +5,9 @@ var imgDataArray = [];
 var data_final;
 var loaded=false;
 var model_2;
+var statusReport=document.querySelector('#status');
+var results=["BIG", "AVERAGE", "SMALL"];
+var comment=["That's more like it.", "Meh", "Are you even a man?"]
 
 var loader = document.querySelector('#loader');
 loader.addEventListener('change', printImage, false);
@@ -30,11 +33,11 @@ function load_data() {
     }
   }
 
-  console.log('[INFO] Image converted to array');
+  statusReport.innerHTML='[INFO] Image converted to array';
   data_final = tf.tensor3d(imgDataArray, [224, 224, 3], 'float32');
-  console.log('[INFO] Transformed array to 3D');
+  statusReport.innerHTML='[INFO] Transformed array to 3D';
   data_final = data_final.reshape([1, 224, 224, 3]);
-  console.log('[INFO] One more dimension added');
+  statusReport.innerHTML='[INFO] One more dimension added';
 
   if (loaded) {
     predict();
@@ -44,19 +47,28 @@ function load_data() {
 }
 
 async function wait_model_2() {
-  console.log('[INFO] Loading Model');
+  statusReport.innerHTML='[INFO] Loading Model';
   model_2 = await tf.loadModel('tfjs_softmax/model.json');
   predict();
   loaded=true;
 };
 
 function predict() {
-  console.log('[INFO] Model loaded, making predictions');
+  statusReport.innerHTML='[INFO] Model loaded, making predictions';
   const output = model_2.predict(data_final);
-  console.log('[INFO] Exporting predictions');
+  statusReport.innerHTML='[INFO] Exporting predictions';
   const predictions = Array.from(output.dataSync());
   for (var i = 0; i < predictions.length; i++) {
     predictions[i] = Math.round(predictions[i] * 100);
   }
   console.log(predictions);
+
+  var index = 0;
+  for (var i = 0, temp = 0; i < predictions.length; i++) {
+    if (predictions[i]>=temp) {
+      index = i;
+    }
+  }
+  document.querySelector('#result').innerHTML=results[index];
+  statusReport.innerHTML=comment[index];
 }
