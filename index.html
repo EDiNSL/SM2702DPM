@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>Machine</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.9.0"> </script>
-    <link rel="stylesheet" type="text/css" href="index.css" />
-  </head>
-  <body>
-    <body>
-      <div id="content">
-        <h1>SIZES OF THE INTERNET</h1>
-        <div id="canvas">
-          <canvas id="imageCanvas" width="224" height="224"></canvas>
-          <div id="loadcontainer">
-            <input type="file" id="loader" name="imageLoader"/>
-            <p id="select">Select</p>
-          </div>
-          <button type="button" id="button" name="button" onclick="load_data()">Submit</button>
-        </div>
-        <script src="script/tfmodel.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title>Machine</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.9.0">
+  </script>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+</head>
+
+<body>
+  <div id="content">
+    <h1>SIZES OF THE INTERNET</h1>
+    <div id="canvas">
+      <canvas id="imageCanvas" width="224" height="224"></canvas>
+      <div id="loadcontainer">
+        <input type="file" id="loader" name="imageLoader" />
+        <p id="select">Select</p>
       </div>
-    </body>
-  </body>
+      <button type="button" id="button" name="button" onclick="load_data()">Submit</button>
+      <p id="status">AWAITING YOUR CONTRIBUTION</p>
+      <h2 id="result">AVERAGE</h2>
+    </div>
+  </div>
+</body>
+
+<script src="script/tfmodel.js"></script>
+
 </html>
