@@ -67,6 +67,7 @@ function predict() {
   for (var i = 0, temp = 0; i < predictions.length; i++) {
     if (predictions[i]>=temp) {
       index = i;
+      temp = predictions[i];
     }
   }
   document.querySelector('#result').innerHTML=results[index];
